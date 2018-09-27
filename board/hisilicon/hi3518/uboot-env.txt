@@ -1,25 +1,25 @@
-meminfo=mem=40M
+meminfo=mem=46M
 sensor_type=sc1135
 console=ttyAMA0,115200n8
-bootargs=mem=40M console=ttyAMA0,115200n8
+bootargs=mem=46M console=ttyAMA0,115200n8
 init=/init
 bootdelay=1
 baudrate=115200
 ethaddr=00:00:23:34:45:66
-ipaddr=192.168.1.15
+ipaddr=192.168.10.10
 netmask=255.255.255.0
-serverip=192.168.1.2
-gatewayip=192.168.1.1
+serverip=192.168.10.1
+gatewayip=192.168.10.1
 preboot=
 rootpath=/tftpboot/hi3518/rootfs
-bootfile=hi3518/uImage
+bootfile=uImage
 loadaddr=0x81000000
 mdio_intf=mii
-phyaddru=1
-phyaddrd=2
+phyaddru=0
+phyaddrd=1
 netdev=eth0
 nfsopts=hard,tcp,vers=3
-hieth=hieth.mdioifu=0 hieth.mdioifd=0 hieth.phyaddru=1 hieth.phyaddrd=2
+hieth=hieth.mdioifu=0 hieth.mdioifd=0 hieth.phyaddru=0 hieth.phyaddrd=1
 mtdparts=hi_sfc:512k(uboot)ro,256k(uboot-env),256k(mfd),2m(kernel),5m(rootfs),-(user)
 flashroot=/dev/mtdblock4
 flashrootfstype=squashfs,jffs2
